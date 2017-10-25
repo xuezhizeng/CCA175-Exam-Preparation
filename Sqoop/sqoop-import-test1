@@ -1,3 +1,5 @@
+Ejemplo Sqoop 1: importar una tabla completa de mysql
+
 Desde la terminal ejecutar el siguiente comando:
 sqoop import --connect jdbc:mysql://quickstart:3306/retail_db \
 --table customers --username retail_dba --password cloudera \
