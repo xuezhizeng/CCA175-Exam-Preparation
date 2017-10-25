@@ -17,9 +17,9 @@ Cambiar el delimitador a tab
 *************************************************************************
 
 Para comprobar que el contenido se haya cargado, ejecutar en la terminal:
-hdfs dfs -ls /user/clouder/sqoop-test1
+hdfs dfs -ls /user/cloudera/sqoop-test1
 
 Para ver los datos cargados, ejecutar en la terminal:
-hdfs dfs -cat /user/clouder/sqoop-test1/part-m-00000
+hdfs dfs -cat /user/cloudera/sqoop-test1/part-m-00000
 
 Nota: la cantidad de archivos dependera de la cantidad de mappers.
