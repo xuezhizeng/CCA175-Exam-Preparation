@@ -6,6 +6,12 @@ sqoop import --connect jdbc:mysql://quickstart:3306/retail_db \
 Si el target-dir ya existe, agregar al final:
 --delete-target-dir
 
+Cambiar el delimitador a coma u otro caracter (por defecto usa coma)
+--fields-terminated-by ,
+
+Cambiar el delimitador a tab
+--fields-terminated-by \\t
+
 *************************************************************************
 
 Para comprobar que el contenido se haya cargado, ejecutar en la terminal:
