@@ -1,4 +1,4 @@
-Ejemplo Sqoop 1: importar una tabla completa de mysql
+Ejemplo Sqoop 1: importar una tabla completa de mysql (en este caso "customers")
 
 Desde la terminal ejecutar el siguiente comando:
 sqoop import --connect jdbc:mysql://quickstart:3306/retail_db \
