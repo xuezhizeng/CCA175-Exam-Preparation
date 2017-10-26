@@ -5,6 +5,8 @@ sqoop import --connect jdbc:mysql://quickstart:3306/retail_db \
 --table customers --username retail_dba --password cloudera \
 --target-dir /user/cloudera/sqoop-test1
 
+-------------------------------------------------------------------------
+
 Si el target-dir ya existe, agregar al final:
 --delete-target-dir
 
