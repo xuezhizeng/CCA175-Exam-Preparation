@@ -1,6 +1,5 @@
 Import control arguments:
 
-Argument	Description
 * --append	Append data to an existing dataset in HDFS
 * --as-avrodatafile	Imports data to Avro Data Files
 * --as-sequencefile	Imports data to SequenceFiles
