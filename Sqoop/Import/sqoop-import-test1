@@ -1,1 +1,25 @@
-test
+* Ejemplo Sqoop 1: importar una tabla completa de mysql *
+
+Desde la terminal ejecutar el siguiente comando:
+sqoop import --connect jdbc:mysql://quickstart:3306/retail_db \
+--table customers --username retail_dba --password cloudera \
+--target-dir /user/cloudera/sqoop-test1
+
+Si el target-dir ya existe, agregar al final:
+--delete-target-dir
+
+Cambiar el delimitador a coma u otro caracter (por defecto usa coma)
+--fields-terminated-by ,
+
+Cambiar el delimitador a tab
+--fields-terminated-by \\t
+
+*************************************************************************
+
+Para comprobar que el contenido se haya cargado, ejecutar en la terminal:
+hdfs dfs -ls /user/cloudera/sqoop-test1
+
+Para ver los datos cargados, ejecutar en la terminal:
+hdfs dfs -cat /user/cloudera/sqoop-test1/part-m-00000
+
+Nota: la cantidad de archivos dependera de la cantidad de mappers.
