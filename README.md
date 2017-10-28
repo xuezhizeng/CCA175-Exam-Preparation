@@ -11,7 +11,5 @@ https://www.cloudera.com/downloads/quickstart_vms/5-12.html
 ## Tutorial Getting Started de Cloudera 
 https://www.cloudera.com/developers/get-started-with-hadoop-tutorial.html
 
-------------------------------------------------
-
-## LinkedIn:
+## LinkedIn
 https://www.linkedin.com/in/sebastian-ruiz-martinez/
