@@ -13,5 +13,5 @@ https://www.cloudera.com/developers/get-started-with-hadoop-tutorial.html
 
 ------------------------------------------------
 
-Los invito a que conozcan mi perfil en Linkedin:
-* https://www.linkedin.com/in/sebastian-ruiz-martinez/
+## LinkedIn:
+https://www.linkedin.com/in/sebastian-ruiz-martinez/
