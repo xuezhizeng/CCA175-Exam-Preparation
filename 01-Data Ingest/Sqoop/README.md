@@ -1,4 +1,4 @@
-# SQOOP
+# Sqoop
 
 http://sqoop.apache.org/docs/1.4.6/SqoopUserGuide.html
 
