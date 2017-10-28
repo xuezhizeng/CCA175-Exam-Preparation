@@ -2,14 +2,14 @@
 
 Comparto mis ejercicios de preparacion para el examen CCA175 de Cloudera.
 
-Informacion de la certificacion CCA175 (Spark and Hadoop Developer)
-* https://www.cloudera.com/more/training/certification/cca-spark.html
+## Temario:
+https://www.cloudera.com/more/training/certification/cca-spark.html
 
-Maquina Virtual:
-* https://www.cloudera.com/downloads/quickstart_vms/5-12.html
+## Maquina Virtual
+https://www.cloudera.com/downloads/quickstart_vms/5-12.html
 
-Tutorial Getting Started de Cloudera 
-* https://www.cloudera.com/developers/get-started-with-hadoop-tutorial.html
+## Tutorial Getting Started de Cloudera 
+https://www.cloudera.com/developers/get-started-with-hadoop-tutorial.html
 
 ------------------------------------------------
 
