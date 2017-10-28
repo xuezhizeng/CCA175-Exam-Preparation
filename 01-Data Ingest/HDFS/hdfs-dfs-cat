@@ -1,0 +1,5 @@
+Mostrar el contenido de un archivo en HDFS
+
+$ hdfs dfs -tail /user/cloudera/file1
+$ hdfs dfs -head /user/cloudera/file1
+$ hdfs dfs -cat /user/cloudera/file1
