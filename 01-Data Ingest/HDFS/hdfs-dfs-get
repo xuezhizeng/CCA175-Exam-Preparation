@@ -1,0 +1,4 @@
+Para bajar archivos o directorios a HDFS (los 2 comandos son equivalentes)
+
+$ hdfs dfs -get /user/cloudera/file1 file1
+$ hdfs dfs -copyToLocal /user/cloudera/file1 file1
