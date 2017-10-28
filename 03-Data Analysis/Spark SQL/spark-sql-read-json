@@ -1,0 +1,7 @@
+from pyspark.sql import SQLContext
+sqlContext = SQLContext(sc)
+
+df = sqlContext.read.json("/user/cloudera/people.json")
+
+# Displays the content of the DataFrame to stdout
+df.show()
