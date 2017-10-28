@@ -5,7 +5,7 @@ This is a practical exam and the candidate should be familiar with all aspects o
 
 ---
 
-spark-submit <br >
+**spark-submit <br >
 
 Documentacion Spark <br >
 
