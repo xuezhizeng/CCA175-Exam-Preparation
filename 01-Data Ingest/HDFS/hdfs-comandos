@@ -1,10 +1,3 @@
-Para subir archivos o directorios a HDFS (los 2 comandos son equivalentes)
-
-$ hdfs dfs -put file1 /user/cloudera/file1
-$ hdfs dfs -copyFromLocal file1 /user/cloudera/file1
-
---------------------------------------------------
-
 Para bajar archivos o directorios a HDFS (los 2 comandos son equivalentes)
 
 $ hdfs dfs -get /user/cloudera/file1 file1
