@@ -2,7 +2,7 @@
 
 Comparto mis ejercicios de preparacion para el examen CCA175 de Cloudera.
 
-## Temario:
+## Temario
 https://www.cloudera.com/more/training/certification/cca-spark.html
 
 ## Maquina Virtual
