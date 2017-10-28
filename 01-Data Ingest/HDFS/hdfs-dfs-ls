@@ -1,2 +1,3 @@
 Listar el contenido de un directorio en HDFS
+
 $ hdfs dfs -ls /user/cloudera
