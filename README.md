@@ -1,6 +1,6 @@
 # CCA175-Ejercicios-Resueltos
 
-Comparto mis ejercicios de preparacion para el examen CCA175 de Cloudera.
+Comparto mis ejercicios de preparación para el examen CCA175 de Cloudera.
 
 ## Temario
 https://www.cloudera.com/more/training/certification/cca-spark.html
