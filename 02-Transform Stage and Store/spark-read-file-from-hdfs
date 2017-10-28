@@ -1,0 +1,2 @@
+distFile = sc.textFile("/user/cloudera/data.txt")
+distFile.collect()
