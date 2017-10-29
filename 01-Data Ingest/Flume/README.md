@@ -17,5 +17,11 @@ global options:
 agent options:
   --name,-n <name>          the name of this agent (required)
   --conf-file,-f <file>     specify a config file (required if -z missing)
-  
+
+```
+
+# Ejemplo
+
+```Shell
+$ bin/flume-ng agent --conf conf --conf-file example.conf --name a1 -Dflume.root.logger=INFO,console
 ```
