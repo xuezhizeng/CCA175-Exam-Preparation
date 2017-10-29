@@ -57,3 +57,7 @@ Found 4 items
 -rw-r--r--   1 cloudera cloudera       1225 2017-10-29 06:45 /user/cloudera/flume/flume-exec-to-hdfs/FlumeData.1509284677747
 -rw-r--r--   1 cloudera cloudera       1000 2017-10-29 06:45 /user/cloudera/flume/flume-exec-to-hdfs/FlumeData.1509284677748
 ```
+
+## Examples
+https://www.cloudera.com/documentation/other/tutorial/CDH5/topics/ht_flume_to_hdfs.html <br >
+http://www.bogotobogo.com/Hadoop/BigData_hadoop_CDH5_Flume_Introduction.php
