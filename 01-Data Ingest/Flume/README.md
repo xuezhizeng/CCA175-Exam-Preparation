@@ -48,7 +48,7 @@ $ flume-ng agent --conf conf --conf-file flume-test1.conf --name agent1 -Dflume.
 
 ```
 
-## data loaded in HDFS
+## Data loaded in HDFS
 ```Shell
 [cloudera@quickstart ~]$ hdfs dfs -ls /user/cloudera/flume/flume-exec-to-hdfs
 Found 4 items
