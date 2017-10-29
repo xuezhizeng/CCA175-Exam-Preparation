@@ -16,5 +16,5 @@ df.printSchema()
 
 df.registerTempTable("people")
 
-df2 = sqlContext.sql("SELECT name FROM people WHERE age >= 13 AND age <= 19")
+df2 = sqlContext.sql("SELECT name FROM people WHERE age BETWEEN 13 AND 19")
 df2.show()
