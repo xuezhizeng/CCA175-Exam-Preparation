@@ -20,8 +20,30 @@ agent options:
 
 ```
 
-# Ejemplo
+# flume-test1.conf
+```Shell
+# /etc/flume-ng/conf/flume-test1.conf
+
+agent1.sources = exec1
+agent1.channels = memory1
+agent1.sinks = hdfs1
+
+agent1.sources.exec1.type = exec
+agent1.sources.exec1.command = ping google.com
+
+agent1.channels.memory1.type = memory
+
+agent1.sinks.hdfs1.type = hdfs
+agent1.sinks.hdfs1.hdfs.path = /user/cloudera/flume/flume-exec-to-hdfs
+
+agent1.sources.exec1.channels = memory1
+agent1.sinks.hdfs1.channel = memory1
+```
+
+# flume-ng
 
 ```Shell
-$ bin/flume-ng agent --conf conf --conf-file example.conf --name a1 -Dflume.root.logger=INFO,console
+
+$ flume-ng agent --conf conf --conf-file flume-test1.conf --name agent1 -Dflume.root.logger=FATAL,console
+
 ```
