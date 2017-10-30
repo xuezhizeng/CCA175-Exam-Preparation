@@ -1,4 +1,4 @@
-# CCA175-Ejercicios-Resueltos
+# CCA175 Exam Preparation
 
 Comparto mis ejercicios de preparación para el examen CCA175 de Cloudera.
 
