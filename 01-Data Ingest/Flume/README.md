@@ -20,6 +20,25 @@ agent options:
 
 ```
 
+## Sources
+* Avro Source
+* Thrift Source
+* Exec Source
+* Spooling Directory Source
+* NetCat Source
+* Sequence Generator Source
+* Syslog Sources
+* Syslog TCP Source
+* Syslog UDP Source
+* HTTP Source
+
+## Channels
+* Memory Channel
+* File Channel
+
+## Sinks
+* HDFS Sink
+
 ## Examples
 https://www.cloudera.com/documentation/other/tutorial/CDH5/topics/ht_flume_to_hdfs.html <br >
 https://www.tutorialspoint.com/apache_flume/apache_flume_quick_guide.htm <br >
