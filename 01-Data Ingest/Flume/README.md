@@ -2,7 +2,16 @@
 
 https://flume.apache.org/FlumeUserGuide.html
 
+## Components
+| Sources  | Channels | Sinks |
+| ------------- | ------------- | ------------- |
+| Avro Source  | Memory Channel  | HDFS Sink  |
+| Exec Source  | File Channel  |   |
+| NetCat Source  |    |   |
+| Spooling Directory Source  |   |   |
 
+
+## flume-ng help
 ```Shell
 [cloudera@quickstart ~]$ flume-ng help
 Usage: /usr/lib/flume-ng/bin/flume-ng <command> [options]...
@@ -19,15 +28,6 @@ agent options:
   --conf-file,-f <file>     specify a config file (required if -z missing)
 
 ```
-
-## Components
-| Sources  | Channels | Sinks |
-| ------------- | ------------- | ------------- |
-| Avro Source  | Memory Channel  | HDFS Sink  |
-| Exec Source  | File Channel  |   |
-| NetCat Source  |    |   |
-| Spooling Directory Source  |   |   |
-
 
 ## Examples
 https://www.cloudera.com/documentation/other/tutorial/CDH5/topics/ht_flume_to_hdfs.html <br >
