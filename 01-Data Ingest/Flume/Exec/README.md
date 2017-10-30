@@ -1,4 +1,4 @@
-# Spooling Directory Source
+# Exec Source
 
 ## flume-test1.conf
 ```Shell
