@@ -60,4 +60,5 @@ Found 4 items
 
 ## Examples
 https://www.cloudera.com/documentation/other/tutorial/CDH5/topics/ht_flume_to_hdfs.html <br >
+https://www.tutorialspoint.com/apache_flume/apache_flume_quick_guide.htm <br >
 http://www.bogotobogo.com/Hadoop/BigData_hadoop_CDH5_Flume_Introduction.php
