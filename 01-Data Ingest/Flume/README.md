@@ -20,6 +20,7 @@ agent options:
 
 ```
 
+## Components
 | Sources  | Channels | Sinks |
 | ------------- | ------------- | ------------- |
 | Avro Source  | Memory Channel  | HDFS Sink  |
