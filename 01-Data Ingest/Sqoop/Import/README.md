@@ -1,3 +1,5 @@
+
+# sqoop import --help
 ```Shell
 [cloudera@quickstart ~]$ sqoop import --help
 usage: sqoop import [GENERIC-ARGS] [TOOL-ARGS]
@@ -32,3 +34,5 @@ Output line formatting arguments:
 
 
 ```
+
+Note: - if we don’t specify the output directory then sqoop creates the directory with the name of table which you have uploaded in HDFS.
