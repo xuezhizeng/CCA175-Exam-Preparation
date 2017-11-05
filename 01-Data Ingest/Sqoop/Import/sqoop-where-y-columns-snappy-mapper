@@ -1,0 +1,52 @@
+
+sqoop import \
+--connect jdbc:mysql://quickstart:3306/retail_db \
+--username retail_dba \
+--password cloudera \
+--table products \
+--columns "product_name, product_price" \
+--where "product_price > 30.00" \
+--delete-target-dir \
+--compression-codec snappy \
+-m 1
+-----------------------------------------------------
+
+Con Snappy 
+
+[cloudera@quickstart ~]$ hdfs dfs -ls /user/cloudera/products
+Found 2 items
+-rw-r--r--   1 cloudera cloudera          0 2017-11-04 21:09 /user/cloudera/products/_SUCCESS
+-rw-r--r--   1 cloudera cloudera      15419 2017-11-04 21:09 /user/cloudera/products/part-m-00000.snappy
+
+Como esta comprimido  no tiene sentido hacer un tail
+
+-----------------------------------------------------
+
+Sin Snappy
+
+[cloudera@quickstart ~]$ hdfs dfs -ls /user/cloudera/productsFound 2 items
+-rw-r--r--   1 cloudera cloudera          0 2017-11-04 21:06 /user/cloudera/products/_SUCCESS
+-rw-r--r--   1 cloudera cloudera      45985 2017-11-04 21:06 /user/cloudera/products/part-m-00000
+
+[cloudera@quickstart ~]$ hdfs dfs -tail /user/cloudera/products/part-m-00000's Replica Los Angeles Dodgers Ya,100.0
+Nike Men's Home Game Jersey Cleveland Browns ,100.0
+Nike Youth Home Game Jersey Cleveland Browns ,70.0
+Nike Men's Cleveland Browns Johnny Manziel #2,32.0
+Nike Men's Home Game Jersey Denver Broncos Pe,100.0
+Nike Men's Home Game Jersey Buffalo Bills Sam,100.0
+Nike Men's Home Game Jersey San Francisco 49e,100.0
+Nike Men's Home Game Jersey Pittsburgh Steele,100.0
+Nike Men's Home Game Jersey New Orleans Saint,100.0
+Nike Men's Andrew Luck Jersey - Home Game Ind,100.0
+Nike Men's Home Game Jersey New York Giants O,100.0
+Nike Men's Home Game Jersey Carolina Panthers,100.0
+Nike Men's Home Game Jersey Chicago Bears Jar,100.0
+Nike Men's Home Game Jersey New York Giants E,100.0
+Majestic Men's Replica Texas Rangers Russell ,69.97
+Nike Women's Cleveland Browns Johnny Football,34.0
+Nike Men's St. Louis Rams Michael Sam #96 Nam,32.0
+Nike Men's Home Game Jersey St. Louis Rams Mi,100.0
+Nike Men's Home Game Jersey St. Louis Rams Aa,100.0
+Nike Men's Home Game Jersey St. Louis Rams Gr,100.0
+
+
