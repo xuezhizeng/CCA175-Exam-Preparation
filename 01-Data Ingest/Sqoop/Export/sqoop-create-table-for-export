@@ -1,0 +1,2 @@
+-- Create a copy of the products table structure.
+CREATE TABLE products_for_export AS SELECT * FROM products WHERE 1 = 2;
