@@ -1,4 +1,0 @@
-Borrar un archivo o directorio
-
-$ hdfs dfs -rm /user/cloudera/file1
-$ hdfs dfs -rm -r /user/cloudera/test-mkdir
