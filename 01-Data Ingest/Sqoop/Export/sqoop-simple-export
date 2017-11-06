@@ -2,5 +2,5 @@ $ sqoop export \
 --connect jdbc:mysql://quickstart:3306/retail_db \
 --username retail_dba \
 --password cloudera \
---table customers2 \ 
---export-dir /user/cloudera/sqoop-test1
+--table products_for_export \
+--export-dir /user/cloudera/products
