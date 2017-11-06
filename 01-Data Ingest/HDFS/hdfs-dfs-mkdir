@@ -1,4 +1,0 @@
-Crear un directorio en HDFS
-
-$ hdfs dfs -mkdir /user/cloudera/test-mkdir
-
