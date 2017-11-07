@@ -1,4 +1,6 @@
+# flume-test2.conf
 
+```Shell
 # Nombrar los componentes del agente
 agent1.sources = netcat1
 agent1.channels = memory1
@@ -19,3 +21,4 @@ agent1.sinks.hdfs1.hdfs.path = /tmp/flume-netcat-to-hdfs-test1
 # Unir el source y el sink al channel
 agent1.sources.netcat1.channels = memory1
 agent11.sinks.hdfs1.channel = memory1
+```
