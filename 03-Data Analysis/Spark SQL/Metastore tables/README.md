@@ -12,12 +12,12 @@ To work with data stored in Hive or Impala tables from Spark applications, const
 ### Import all tables from retail_db using Sqoop
 ```Shell
 sqoop import-all-tables \
---connect "jdbc:mysql://quickstart.cloudera:3306/retail_db" \
+--connect jdbc:mysql://quickstart.cloudera:3306/retail_db \
 --username retail_dba \
 --password cloudera \
 --target-dir /user/cloudera/retail_db
 --hive-import \
 --hive-database retail_db \
 --create-hive-table \
---as-textfile;
+--as-textfile
 ```
