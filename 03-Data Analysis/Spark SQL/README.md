@@ -6,6 +6,15 @@ https://spark.apache.org/docs/1.6.0/api/python/pyspark.sql.html#pyspark.sql.Data
 Documentación Cloudera <br >
 https://www.cloudera.com/documentation/enterprise/5-10-x/topics/spark_sparksql.html#spark_sql
 
+
+## SQLContext and HiveContext
+https://www.cloudera.com/documentation/enterprise/5-10-x/topics/spark_sparksql.html#sparksql_sqlcontext
+
+The entry point to all Spark SQL functionality is the SQLContext class or one of its descendants. You create a SQLContext from a SparkContext. With an SQLContext, you can create a DataFrame from an RDD, a Hive table, or a data source.
+
+To work with data stored in Hive or Impala tables from Spark applications, construct a HiveContext, which inherits from SQLContext. With a HiveContext, you can access Hive or Impala tables represented in the metastore database.
+
+
 ## Example
 ```Python
 from pyspark import SparkContext, SparkConf, HiveContext
