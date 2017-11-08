@@ -56,31 +56,31 @@ Spark SQL supports the vast majority of Hive features, such as:
 * All Hive operators, including:
   * Relational operators (=, ⇔, ==, <>, <, >, >=, <=, etc)
   * Arithmetic operators (+, -, *, /, %, etc)
-** Logical operators (AND, &&, OR, ||, etc)
+  * Logical operators (AND, &&, OR, ||, etc)
 * Joins
-** JOIN
-** {LEFT|RIGHT|FULL} OUTER JOIN
-** LEFT SEMI JOIN
-** CROSS JOIN
+  * JOIN
+  * {LEFT|RIGHT|FULL} OUTER JOIN
+  * LEFT SEMI JOIN
+  * CROSS JOIN
 * Unions
 * Sub-queries
-** SELECT col FROM ( SELECT a + b AS col from t1) t2
+  * SELECT col FROM ( SELECT a + b AS col from t1) t2
 * All Hive DDL Functions, including:
-** CREATE TABLE
-** CREATE TABLE AS SELECT
-** ALTER TABLE
+  * CREATE TABLE
+  * CREATE TABLE AS SELECT
+  * ALTER TABLE
 * Most Hive Data types, including:
-** TINYINT
-** SMALLINT
-** INT
-** BIGINT
-** BOOLEAN
-** FLOAT
-** DOUBLE
-** STRING
-** BINARY
-** TIMESTAMP
-** DATE
-** ARRAY<>
-** MAP<>
-** STRUCT<>
+  * TINYINT
+  * SMALLINT
+  * INT
+  * BIGINT
+  * BOOLEAN
+  * FLOAT
+  * DOUBLE
+  * STRING
+  * BINARY
+  * TIMESTAMP
+  * DATE
+  * ARRAY<>
+  * MAP<>
+  * STRUCT<>
