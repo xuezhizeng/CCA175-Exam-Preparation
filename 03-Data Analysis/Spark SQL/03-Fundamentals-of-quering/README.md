@@ -1,7 +1,6 @@
 # Fundamentals of quering
 
 ## Creating DataFrames
-
 ```Python
 from pyspark.sql import SQLContext
 sqlContext = SQLContext(sc)
@@ -10,7 +9,6 @@ df = sqlContext.read.json("/user/cloudera/spark/people.json")
 ```
 
 ## DataFrame operations
-
 ```Python
 # Displays the content of the DataFrame to stdout
 df.show()
@@ -21,15 +19,6 @@ df.show()
 | null | Michael |
 | 30 | Andy |
 | 19 | Justin |
-
-
-```Python
-# Print the schema in a tree format
-df.printSchema()
-```
-root
- |-- age: long (nullable = true)
- |-- name: string (nullable = true)
 
 ```Python
 # Select only the "name" column
@@ -57,6 +46,7 @@ df.select(df['name'], df['age'] + 1).show()
 # Select people older than 21
 df.filter(df['age'] > 21).show()
 ```
+
 | age | name |
 | ------------- | ------------- | 
 | 30 | Andy |
@@ -65,6 +55,7 @@ df.filter(df['age'] > 21).show()
 # Count people by age
 df.groupBy("age").count().show()
 ```
+
 | age | count |
 | ------------- | ------------- | 
 | null | 1 |
