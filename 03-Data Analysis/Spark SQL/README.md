@@ -48,14 +48,14 @@ if __name__ == "__main__":
 Spark SQL supports the vast majority of Hive features, such as:
 
 * Hive query statements, including:
-** SELECT
-** GROUP BY
-** ORDER BY
-** CLUSTER BY
-** SORT BY
+  * SELECT
+  * GROUP BY
+  * ORDER BY
+  * CLUSTER BY
+  * SORT BY
 * All Hive operators, including:
-** Relational operators (=, ⇔, ==, <>, <, >, >=, <=, etc)
-** Arithmetic operators (+, -, *, /, %, etc)
+  * Relational operators (=, ⇔, ==, <>, <, >, >=, <=, etc)
+  * Arithmetic operators (+, -, *, /, %, etc)
 ** Logical operators (AND, &&, OR, ||, etc)
 * Joins
 ** JOIN
