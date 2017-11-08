@@ -12,16 +12,18 @@ df = sqlContext.read.json("/user/cloudera/spark/people.json")
 df.show()
 ```
 
+| age | name |
+| ------------- | ------------- | ------------- |
+| null | Michael |
+| 30 |  Andy |
+| 19 |  Justin |
+
 ## DataFrame operations
 ```Python
 # Show the content of the DataFrame
 df.show()
 
-| age | name |
-| ------------- | ------------- | ------------- |
-| null | Michael
-| 30 |  Andy
-| 19 |  Justin
+
 
 # Print the schema in a tree format
 df.printSchema()
