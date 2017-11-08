@@ -7,7 +7,11 @@ from pyspark.sql import SQLContext
 sqlContext = SQLContext(sc)
 
 df = sqlContext.read.json("/user/cloudera/spark/people.json")
+```
 
+## DataFrame operations
+
+```Python
 # Displays the content of the DataFrame to stdout
 df.show()
 ```
@@ -15,48 +19,57 @@ df.show()
 | age | name |
 | ------------- | ------------- | 
 | null | Michael |
-| 30 |  Andy |
-| 19 |  Justin |
+| 30 | Andy |
+| 19 | Justin |
 
-## DataFrame operations
+
 ```Python
-# Show the content of the DataFrame
-df.show()
-
-
-
 # Print the schema in a tree format
 df.printSchema()
-## root
-## |-- age: long (nullable = true)
-## |-- name: string (nullable = true)
+```
+root
+ |-- age: long (nullable = true)
+ |-- name: string (nullable = true)
 
+```Python
 # Select only the "name" column
 df.select("name").show()
-## name
-## Michael
-## Andy
-## Justin
+```
 
+| name |
+| ------------- | 
+| Michael |
+| Andy |
+| Justin |
+
+```Python
 # Select everybody, but increment the age by 1
 df.select(df['name'], df['age'] + 1).show()
-## name    (age + 1)
-## Michael null
-## Andy    31
-## Justin  20
+```
 
+| name | (age + 1) |
+| ------------- | ------------- | 
+| Michael | null |
+| Andy | 31 |
+| Justin | 20 |
+
+```Python
 # Select people older than 21
 df.filter(df['age'] > 21).show()
-## age name
-## 30  Andy
+```
+| age | name |
+| ------------- | ------------- | 
+| 30 | Andy |
 
+```Python
 # Count people by age
 df.groupBy("age").count().show()
-## age  count
-## null 1
-## 19   1
-## 30   1
 ```
+| age | count |
+| ------------- | ------------- | 
+| null | 1 |
+| 19 | 1 |
+| 30 | 1 |
 
 ## Running SQL Queries
 ```Python
