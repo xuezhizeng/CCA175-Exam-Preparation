@@ -71,6 +71,8 @@ df.groupBy("age").count().show()
 | 19 | 1 |
 | 30 | 1 |
 
+-----
+
 ## Running SQL Queries
 ```Python
 from pyspark.sql import SQLContext
@@ -83,18 +85,21 @@ df = sqlContext.sql("SELECT * FROM table")
 df = sqlContext.sql("SELECT * FROM parquet.'/user/cloudera/spark/users.parquet'")
 ```
 
-# Generic Load/Save Functions
+-----
+
+## Generic Load/Save Functions
 ```Python
 df = sqlContext.read.load("examples/src/main/resources/users.parquet")
 df.select("name", "favorite_color").write.save("namesAndFavColors.parquet")
 ```
 
-Manually Specifying Options
+## Manually Specifying Options
 ```Python
 df = sqlContext.read.load("examples/src/main/resources/people.json", format="json")
 df.select("name", "age").write.save("namesAndAges.parquet", format="parquet")
 ```
 
+-----
 
 ## Interoperating with RDDs
 ```Python
