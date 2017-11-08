@@ -42,3 +42,45 @@ if __name__ == "__main__":
   tbls = sqlContext.sql("show tables")
   tbls.show()
 ```
+
+
+## Supported Hive Features
+Spark SQL supports the vast majority of Hive features, such as:
+
+* Hive query statements, including:
+** SELECT
+** GROUP BY
+** ORDER BY
+** CLUSTER BY
+** SORT BY
+* All Hive operators, including:
+** Relational operators (=, ⇔, ==, <>, <, >, >=, <=, etc)
+** Arithmetic operators (+, -, *, /, %, etc)
+** Logical operators (AND, &&, OR, ||, etc)
+* Joins
+** JOIN
+** {LEFT|RIGHT|FULL} OUTER JOIN
+** LEFT SEMI JOIN
+** CROSS JOIN
+* Unions
+* Sub-queries
+** SELECT col FROM ( SELECT a + b AS col from t1) t2
+* All Hive DDL Functions, including:
+** CREATE TABLE
+** CREATE TABLE AS SELECT
+** ALTER TABLE
+* Most Hive Data types, including:
+** TINYINT
+** SMALLINT
+** INT
+** BIGINT
+** BOOLEAN
+** FLOAT
+** DOUBLE
+** STRING
+** BINARY
+** TIMESTAMP
+** DATE
+** ARRAY<>
+** MAP<>
+** STRUCT<>
