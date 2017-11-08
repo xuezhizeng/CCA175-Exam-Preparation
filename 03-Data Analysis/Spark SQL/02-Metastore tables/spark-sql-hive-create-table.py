@@ -6,7 +6,7 @@ sc = SparkContext(conf=conf)
 sqlContext = HiveContext(sc)
 
 sqlContext.sql("DROP TABLE people")
-sqlContext.sql("CREATE TABLE IF NOT EXISTS people(name STRING, age INT)")
+sqlContext.sql("CREATE TABLE IF NOT EXISTS people(name STRING, age INT) ROW FORMAT DELIMITED FIELDS TERMINATED BY \",\"")
 
 rdd = sc.textFile("/user/cloudera/spark/people.txt") \
         .map(lambda x: x.split(",")) \
