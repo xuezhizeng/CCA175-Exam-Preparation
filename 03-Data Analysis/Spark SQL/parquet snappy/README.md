@@ -1,4 +1,7 @@
 # Write a file with Compression Codec Snappy
+
+https://www.cloudera.com/documentation/enterprise/5-8-x/topics/introduction_compression_snappy.html
+
 ```Python
 from pyspark import SparkConf, SparkContext
 from pyspark.sql import HiveContext
