@@ -5,6 +5,6 @@ conf = SparkConf()
 sc = SparkContext(conf=conf)
 sqlContext = HiveContext(sc)
 
-df = sqlContext.sql("SELECT name, age FROM people")
+df = sqlContext.read.json("/user/cloudera/spark/people.json")
 
 df.write.format('com.databricks.spark.avro').save("/user/cloudera/spark/people-table-avro")
