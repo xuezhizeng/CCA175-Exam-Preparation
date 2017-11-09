@@ -1,4 +1,3 @@
-
 from pyspark import SparkConf, SparkContext
 from pyspark.sql import HiveContext
 
