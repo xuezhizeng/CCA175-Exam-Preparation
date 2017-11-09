@@ -9,9 +9,7 @@ sqlContext = HiveContext(sc)
 
 df = sqlContext.sql("SELECT name, age FROM people")
 
-df.show()
-
 sqlContext.setConf("spark.sql.parquet.compression.codec","snappy")
 
-df.map(lambda x: str(x.name)+","+str(x.age)).saveAsTextFile("/user/cloudera/spark/people-table-to-csv")
+df.write.parquet("/user/cloudera/spark/people-table-parquet")
 ```
