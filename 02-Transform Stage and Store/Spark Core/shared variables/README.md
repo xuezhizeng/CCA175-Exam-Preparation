@@ -12,11 +12,8 @@
 ## Accumulators
 ```Python
 >>> accum = sc.accumulator(0)
-Accumulator<id=0, value=0>
 
 >>> sc.parallelize([1, 2, 3, 4]).foreach(lambda x: accum.add(x))
-...
-10/09/29 18:41:08 INFO SparkContext: Tasks finished in 0.317106 s
 
 >>> accum.value
 10
