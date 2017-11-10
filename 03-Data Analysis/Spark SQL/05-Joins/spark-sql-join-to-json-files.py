@@ -13,6 +13,7 @@ df.show()
 
 df2.show()
 
+# Calcule avg of salaries per department
 df.join(df2,df.id_dept==df2.id). \
         select(df2.name, df.salary). \
         groupBy(df2.name). \
