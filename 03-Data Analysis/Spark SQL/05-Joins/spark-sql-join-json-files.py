@@ -13,5 +13,10 @@ df.registerTempTable("employees")
 
 df2.registerTempTable("departments")
 
-df3 = sqlContext("SELECT e.name, avg(d.salary) FROM employees e JOIN departments d ON e.id_dept = d.id GROUP BY e.name")
+df3 = sqlContext.sql(" \
+        SELECT d.name, AVG(e.salary) AS prom_salary \
+        FROM employees e \
+        JOIN departments d ON e.id_dept = d.id \
+        GROUP BY d.name")
+
 df3.show()
