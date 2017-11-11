@@ -1,8 +1,8 @@
 ## Parameters 
-where: filter the table to import
-columns: select the columns to import
-compression-codec: select compression-codec (in this case Snappy)
-mappers: number of mappers (in this case 1, default 4)
+- where: filter the table to import
+- columns: select the columns to import
+- compression-codec: select compression-codec (in this case Snappy)
+- mappers: number of mappers (in this case 1, default 4)
 
 ```Shell
 sqoop import \
