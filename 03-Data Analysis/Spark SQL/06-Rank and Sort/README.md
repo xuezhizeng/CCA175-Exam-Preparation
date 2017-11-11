@@ -1,7 +1,9 @@
 # Rank and Sort
-New record added to test the rank function
+
 
 ## Dataset
+New record added to test the rank function
+
 ```Shell
 [cloudera@quickstart cca175-spark]$ cat employees_to_rank.json 
 {"name":"Michael", "id_dept":1, "salary":3000}
