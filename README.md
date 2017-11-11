@@ -35,3 +35,6 @@ This is a practical exam and the candidate should be familiar with all aspects o
 
 ## Getting Started Tutorial 
 https://www.cloudera.com/developers/get-started-with-hadoop-tutorial.html
+
+## Linkedin
+https://www.linkedin.com/in/sebastian-ruiz-martinez
