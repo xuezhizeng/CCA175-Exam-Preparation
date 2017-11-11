@@ -1,12 +1,17 @@
-Mismo comportamiento que sin target-dir solo que carga los datos en el path especificado en target-dir. En mi prueba, si el target-dir no existe lo crea.
+If --target-dir doesn't exists, it will be created
 
+## Step 1
+```Shell
 sqoop import \
 --connect jdbc:mysql://quickstart:3306/retail_db \
 --username retail_dba \
 --password cloudera \
 --table products \
 --target-dir /user/cloudera/sqoop/test-con-target-dir
+```
 
+## Step 2
+```Shell
 [cloudera@quickstart ~]$ hdfs dfs -ls /user/cloudera/sqoop/test-con-target-dir
 Found 5 items
 -rw-r--r--   1 cloudera cloudera          0 2017-11-04 18:14 /user/cloudera/sqoop/test-con-target-dir/_SUCCESS
@@ -14,7 +19,10 @@ Found 5 items
 -rw-r--r--   1 cloudera cloudera      43660 2017-11-04 18:14 /user/cloudera/sqoop/test-con-target-dir/part-m-00001
 -rw-r--r--   1 cloudera cloudera      42195 2017-11-04 18:14 /user/cloudera/sqoop/test-con-target-dir/part-m-00002
 -rw-r--r--   1 cloudera cloudera      46719 2017-11-04 18:14 /user/cloudera/sqoop/test-con-target-dir/part-m-00003
+```
 
+## Step 3
+```Shell
 [cloudera@quickstart ~]$ hdfs dfs -tail /user/cloudera/sqoop/test-con-target-dir/part-m-00000
 men's Essential Banded Tank To,,49.99,http://images.acmesports.sports/Under+Armour+Women%27s+Essential+Banded+Tank+Top
 330,15,Nike Women's Dri-FIT Cotton Tight Capris,,40.0,http://images.acmesports.sports/Nike+Women%27s+Dri-FIT+Cotton+Tight+Capris
