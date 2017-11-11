@@ -37,7 +37,6 @@ totalLength = lineLengths.reduce(lambda a, b: a + b)
 ```
 
 ### Transformations
-
 * map(func)	
 * filter(func)	
 * flatMap(func)	
@@ -49,7 +48,6 @@ totalLength = lineLengths.reduce(lambda a, b: a + b)
 * join(otherDataset, [numTasks])	
 
 ### Actions
-
 * reduce(func)
 * collect()
 * count()
