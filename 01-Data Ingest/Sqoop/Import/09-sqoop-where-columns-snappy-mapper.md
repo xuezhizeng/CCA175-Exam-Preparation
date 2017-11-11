@@ -23,8 +23,6 @@ sqoop import \
 Found 2 items
 -rw-r--r--   1 cloudera cloudera          0 2017-11-04 21:09 /user/cloudera/products/_SUCCESS
 -rw-r--r--   1 cloudera cloudera      15419 2017-11-04 21:09 /user/cloudera/products/part-m-00000.snappy
-
-Como esta comprimido  no tiene sentido hacer un tail
 ```
 
 ## Without Snappy
