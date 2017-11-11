@@ -1,13 +1,18 @@
-Si se ejecuta sin target-dir o warehouse-dir, sqoop crea una carpeta con el nombre de la tabla que se va a importar en el home del usuario en HDFS.
+If --target-dir or --warehouse-dir is not specified, it will create a directory named like the table name to import in the user's home directory.
 
-Por defecto, carga los registros separados por coma y utiliza 4 mappers.
+By default, it will load data comma separeted and use 4 mappers.
 
+## Step 1
+```Shell
 sqoop import \
 --connect jdbc:mysql://quickstart:3306/retail_db \
 --username retail_dba \
 --password cloudera \
 --table products
+```
 
+## Step 2
+```Shell
 [cloudera@quickstart ~]$ hdfs dfs -ls /user/cloudera/products
 Found 5 items
 -rw-r--r--   1 cloudera cloudera          0 2017-11-04 18:06 /user/cloudera/products/_SUCCESS
@@ -15,7 +20,10 @@ Found 5 items
 -rw-r--r--   1 cloudera cloudera      43660 2017-11-04 18:05 /user/cloudera/products/part-m-00001
 -rw-r--r--   1 cloudera cloudera      42195 2017-11-04 18:06 /user/cloudera/products/part-m-00002
 -rw-r--r--   1 cloudera cloudera      46719 2017-11-04 18:06 /user/cloudera/products/part-m-00003
+```
 
+## Step 3
+```Shell
 [cloudera@quickstart ~]$ hdfs dfs -tail /user/cloudera/products/part-m-00000
 men's Essential Banded Tank To,,49.99,http://images.acmesports.sports/Under+Armour+Women%27s+Essential+Banded+Tank+Top
 330,15,Nike Women's Dri-FIT Cotton Tight Capris,,40.0,http://images.acmesports.sports/Nike+Women%27s+Dri-FIT+Cotton+Tight+Capris
@@ -25,4 +33,4 @@ men's Essential Banded Tank To,,49.99,http://images.acmesports.sports/Under+Armo
 334,15,Reebok Women's Fitness Essentials Regular Fit,,38.0,http://images.acmesports.sports/Reebok+Women%27s+Fitness+Essentials+Regular+Fit+Pant
 335,15,Nike Women's Dri-FIT Cotton Regular-Fit Capri,,45.0,http://images.acmesports.sports/Nike+Women%27s+Dri-FIT+Cotton+Regular-Fit+Capris
 336,15,Nike Swoosh Headband - 2",,5.0,http://images.acmesports.sports/Nike+Swoosh+Headband+-+2%22
-
+```
