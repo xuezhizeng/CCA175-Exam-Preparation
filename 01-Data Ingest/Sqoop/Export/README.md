@@ -1,3 +1,4 @@
+## sqoop export --help
 ```Shell
 [cloudera@quickstart ~]$ sqoop export --help
 usage: sqoop export [GENERIC-ARGS] [TOOL-ARGS]
