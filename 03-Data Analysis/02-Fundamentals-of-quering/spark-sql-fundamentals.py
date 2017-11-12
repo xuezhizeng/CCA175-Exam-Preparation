@@ -14,6 +14,6 @@ df.select(df.name).show()
 
 df.select(df['name'],df['age']+1).show()
 
-df.select(df['age']>21).show()
+df.filter(df['age']>21).show()
 
 df.groupBy("age").count().show()
