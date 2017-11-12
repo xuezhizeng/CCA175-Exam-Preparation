@@ -5,7 +5,7 @@ conf = SparkConf()
 sc = SparkContext(conf=conf)
 sqlContext = SQLContext(sc)
 
-df = sqlContext.read.json("/user/cloudera/spark/employees.json")
+df = sqlContext.read.json("/user/cloudera/spark/employees_by_dept.json")
 
 df2 = sqlContext.read.json("/user/cloudera/spark/departments.json")
 
