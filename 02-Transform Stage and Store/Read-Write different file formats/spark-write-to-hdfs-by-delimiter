@@ -1,0 +1,2 @@
+res.map(lambda row: str(row[0]) + "\t" + str(row[1])) \
+   .saveAsTextFile("hdfs:///user/cloudera/res_tsv.txt")  # good format
