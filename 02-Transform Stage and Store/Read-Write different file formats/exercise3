@@ -1,0 +1,56 @@
+>>> rddEx3 = sc.textFiles("/user/cloudera/datasets/names-order.txt")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'SparkContext' object has no attribute 'textFiles'
+>>> 
+>>> 
+>>> 
+>>> 
+>>> rddEx3 = sc.textFile("/user/cloudera/datasets/names-order.txt")
+>>> rddEx3.map(lambda x: x.split("|"))
+PythonRDD[79] at RDD at PythonRDD.scala:43
+>>> rddEx3.collect()
+[u'1|Smith|Sara', u'2|Johnson|David', u'3|Martin|Lester', u'4|Smith|Aaron', u'5|Jones|Aaron']
+>>> rddEx3_2 = rddEx3.map(lambda x: Row(id=x[0],surname=x[1],name=[2]))
+>>> rddEx3_2.collect()
+[Row(id=u'1', name=[2], surname=u'|'), Row(id=u'2', name=[2], surname=u'|'), Row(id=u'3', name=[2], surname=u'|'), Row(id=u'4', name=[2], surname=u'|'), Row(id=u'5', name=[2], surname=u'|')]
+>>> rddEx3.collect()
+[u'1|Smith|Sara', u'2|Johnson|David', u'3|Martin|Lester', u'4|Smith|Aaron', u'5|Jones|Aaron']
+>>> rddEx3_2 = rddEx3.map(lambda x: x.split("|"))
+>>> rddEx3_2.collect()
+[[u'1', u'Smith', u'Sara'], [u'2', u'Johnson', u'David'], [u'3', u'Martin', u'Lester'], [u'4', u'Smith', u'Aaron'], [u'5', u'Jones', u'Aaron']]
+>>> rddEx3_3 = rddEx3_2.map(lambda x: Row(id=x[0],surname=x[1],name=[2]))
+>>> rddEx3_3.collect()
+[Row(id=u'1', name=[2], surname=u'Smith'), Row(id=u'2', name=[2], surname=u'Johnson'), Row(id=u'3', name=[2], surname=u'Martin'), Row(id=u'4', name=[2], surname=u'Smith'), Row(id=u'5', name=[2], surname=u'Jones')]
+>>> rddEx3_2.collect()
+[[u'1', u'Smith', u'Sara'], [u'2', u'Johnson', u'David'], [u'3', u'Martin', u'Lester'], [u'4', u'Smith', u'Aaron'], [u'5', u'Jones', u'Aaron']]
+>>> rddEx3_3 = rddEx3_2.map(lambda x: Row(id=x[0],surname=x[1],name=x[2]))
+>>> rddEx3_3.collect()
+[Row(id=u'1', name=u'Sara', surname=u'Smith'), Row(id=u'2', name=u'David', surname=u'Johnson'), Row(id=u'3', name=u'Lester', surname=u'Martin'), Row(id=u'4', name=u'Aaron', surname=u'Smith'), Row(id=u'5', name=u'Aaron', surname=u'Jones')]
+>>> df4 = sqlContext.createDataFrame(rddEx3_3)
+>>> df4.show()
++---+------+-------+
+| id|  name|surname|
++---+------+-------+
+|  1|  Sara|  Smith|
+|  2| David|Johnson|
+|  3|Lester| Martin|
+|  4| Aaron|  Smith|
+|  5| Aaron|  Jones|
++---+------+-------+
+
+>>> df4.registerTempTable("names_order")
+>>> df4_2 = sqlContext.sql("select name, surname from names_order order by name,surname asc")
+>>> df4_2.show()
++------+-------+                                                                
+|  name|surname|
++------+-------+
+| Aaron|  Jones|
+| Aaron|  Smith|
+| David|Johnson|
+|Lester| Martin|
+|  Sara|  Smith|
++------+-------+
+
+>>> rdd4_2 = df4_2.map(lambda x: x[0] + "," + x[1])
+>>> rdd4_2.saveAsTextFile("/user/cloudera/results/test-names-order.txt")
