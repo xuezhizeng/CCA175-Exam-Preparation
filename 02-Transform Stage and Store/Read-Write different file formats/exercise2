@@ -1,0 +1,25 @@
+>>> rddEx2 = sc.textFile("/user/cloudera/datasets/names.txt")
+>>> rddEx2.collect()
+[u'1|Smith|Sara', u'2|Johnson|David', u'3|Martin|Lester']                       
+>>> rddEx2_2 = rddEx2.map(lambda x: x.split("|"))
+>>> rddEx2_2.collect()
+[[u'1', u'Smith', u'Sara'], [u'2', u'Johnson', u'David'], [u'3', u'Martin', u'Lester']]
+>>> rddEx2_3 = rddEx2_2.map(lambda x: Row(id=x[0],surname=x[1],name=x[2]))
+>>> rddEx2_3.collect()
+[Row(id=u'1', name=u'Sara', surname=u'Smith'), Row(id=u'2', name=u'David', surname=u'Johnson'), Row(id=u'3', name=u'Lester', surname=u'Martin')]
+>>> dfEx2 = sqlContext.createDataFrame(rddEx2_3)
+
+>>> dfEx2.registerTempTable("names")
+>>> dfEx2_2 = sqlContext.sql("select name, surname from names")
+>>> dfEx2_2.show()
++------+-------+
+|  name|surname|
++------+-------+
+|  Sara|  Smith|
+| David|Johnson|
+|Lester| Martin|
++------+-------+
+
+>>> rddEx2 = dfEx2_2.map(lambda x: x[0] + " " + x[1])
+>>> rddEx2.saveAsTextFile("/user/cloudera/results/test-names/names.txt")
+>>>                                                                             
