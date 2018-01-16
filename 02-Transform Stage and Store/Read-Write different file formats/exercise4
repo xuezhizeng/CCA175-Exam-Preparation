@@ -1,0 +1,11 @@
+>>> df4 = sqlContext.read.json("/user/cloudera/datasets/people.json")
+>>> df4.show()                                                                  
++----+-------+
+| age|   name|
++----+-------+
+|null|Michael|
+|  30|   Andy|
+|  19| Justin|
++----+-------+
+
+>>> df4.write.format('com.databricks.spark.avro').save("/user/cloudera/results/test-people.avro")
