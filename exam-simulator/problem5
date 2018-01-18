@@ -1,4 +1,9 @@
+Problema 5
 
+Leer un archivo AVRO, guardar en HDFS el contenido en formato parquet y aplicando el compression codec correspondiente.
+
+ORIGEN
+/user/cloudera/datasets/twitter.avro
 
 +----------+--------------------+----------+
 |  username|               tweet| timestamp|
@@ -11,3 +16,6 @@ root
  |-- username: string (nullable = false)
  |-- tweet: string (nullable = false)
  |-- timestamp: long (nullable = false)
+
+DESTINO
+/user/cloudera/results/problem5/
