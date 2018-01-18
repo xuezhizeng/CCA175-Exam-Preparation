@@ -1,9 +1,9 @@
 Problema 1
 
-Leer un archivo separado por tabs y concatenar el nombre y el apellido separado por espacio y guardarlo en hdfs separado por coma.
+Leer un archivo separado por pipes, concatenar el nombre y el apellido separado por espacio y guardarlo en hdfs separado por coma.
 
 ORIGEN
-/user/cloudera/datasets/names.txt
+/user/cloudera/datasets/names-order.txt
 
 1|Smith|Sara
 2|Johnson|David
