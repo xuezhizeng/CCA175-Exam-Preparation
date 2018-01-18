@@ -1,0 +1,13 @@
+
+
++----------+--------------------+----------+
+|  username|               tweet| timestamp|
++----------+--------------------+----------+
+|    miguno|Rock: Nerf paper,...|1366150681|
+|BlizzardCS|Works as intended...|1366154481|
++----------+--------------------+----------+
+
+root
+ |-- username: string (nullable = false)
+ |-- tweet: string (nullable = false)
+ |-- timestamp: long (nullable = false)
