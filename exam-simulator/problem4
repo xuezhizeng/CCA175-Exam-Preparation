@@ -1,0 +1,15 @@
+Problema 4
+
+Leer un archivo delimitado por tabs, contar la frecuencia de los estados y guardar el nombre del estado y la cantidad en HDFS delimitado por coma.
+
+ORIGEN
+/user/cloudera/datasets/state-count.tsv
+
+1	754	TX	IAD
+2	1000	TX	IND
+3	1925	WN	JAX
+4	2121	IL	LAS
+5	1132	TX	BWI
+
+DESTINO
+/user/cloudera/results/problem4/
