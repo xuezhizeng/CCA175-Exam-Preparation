@@ -1,0 +1,15 @@
+Problema 2
+
+Leer un archivo separado por pipes, ordenar por nombre y apellido ascendente y guardar el resultado en hdfs separado por coma.
+
+ORIGEN
+/user/cloudera/datasets/names-order.txt
+
+1|Smith|Sara
+2|Johnson|David
+3|Martin|Lester
+4|Smith|Aaron
+5|Jones|Aaron
+
+DESTINO
+/user/cloudera/results/problem2/
