@@ -1,6 +1,7 @@
 Problema 4
 
-Leer un archivo delimitado por tabs, contar la frecuencia de los estados que cumplen con una determinada condicion (ejemplo state = 'TX') y guardar el nombre del estado y la cantidad en HDFS delimitado por coma.
+Leer un archivo delimitado por tabs, contar la frecuencia de los estados que cumplen con una determinada 
+condicion (ejemplo state = 'TX') y guardar el nombre del estado y la cantidad en HDFS delimitado por coma.
 
 ORIGEN
 /user/cloudera/datasets/state-count.tsv
