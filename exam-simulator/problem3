@@ -1,0 +1,14 @@
+Problema 3
+
+Leer un archivo JSON y guardarlo en HDFS en formato AVRO.
+
+ORIGEN
+/user/cloudera/datasets/employees.json
+
+{"name":"Michael", "salary":3000}
+{"name":"Andy", "salary":4500}
+{"name":"Justin", "salary":3500}
+{"name":"Berta", "salary":4000}
+
+DESTINO
+/user/cloudera/results/problem3/
